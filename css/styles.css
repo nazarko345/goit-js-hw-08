@@ -1,0 +1,48 @@
+body {
+  font-family: "Inter", sans-serif;
+  color: #050505;
+  background-color: #f8f8f8;
+  padding: 0 270px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+.gallery-image {
+    width: 360px; 
+    height: 200px; 
+    border-radius: 15px;
+}
+
+.original-img {
+    display: block;
+    width: 1112px;
+    height: 640px;
+}
