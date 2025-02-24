@@ -85,14 +85,9 @@ const markup = images
 
 galeryList.innerHTML = markup;
 
-const galleryItem = document.querySelector(".gallery-item");
-const galleryLink = document.querySelector(".gallery-link");
-
 galeryList.addEventListener("click", (event) => {
   event.preventDefault();
-  if (event.currentTarget === event.target) {
-      return;
-    }
+  if (event.target.nodeName === 'IMG') {
     const originalSrc = event.target.dataset.source;
     console.log(originalSrc);
     const instance = basicLightbox.create(`
@@ -100,5 +95,6 @@ galeryList.addEventListener("click", (event) => {
         `);
 
   instance.show();
+    }
 });
 
